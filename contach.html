@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contac us</title>
+    <script src="contact.js"></script>
+      <style>
+
+
+body, html {
+  overflow-x: hidden;
+}
+  
+        #mainnav
+{
+    background-color: black;
+    height: 50px;
+    width: 1905px;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+
+}
+ #contact,a
+{
+    
+     display: inline-block;     /* Required for width/height to apply */
+  width: 120px;
+  height: 25px;
+  line-height: 50px;         /* Vertically center text */
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  border-radius: 9px;
+  gap: 20px;
+  line-height: 100%;
+}
+ #footernav
+  {
+    background-color: #1B1B1B;
+    color: white;
+    height: 200px;
+    width: 100%px;
+    text-align: center;
+    padding: 20px;
+  }
+  a:hover
+  {
+      color: black;
+  background-color: white;
+  border: 1px solid black;
+  /* padding: 10px; */
+        border: 4px solid black;
+
+  }
+  form
+  {
+    /* border: 2px solid rgba(123, 115, 115, 0.543);        */
+    background-color: rgba(0, 0, 0, 0.863);
+    height: 700px;
+    width: 500px;
+    text-align: center;
+justify-content: center;
+  margin-left: 600px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  gap: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color:#17171727; */
+  border-radius: 12%;
+  box-shadow:inset 15px 15px 25px black;
+  }
+
+  label
+  {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+    /* color: #555; */
+  }
+  input
+  {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  button{
+    padding: 15px;
+    background-color: #32323273;
+    border-radius: 16px;
+    border-color: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: large;
+    
+  }
+  button:hover
+  {
+    background-color: white;
+    color: #10111287;
+        box-shadow: 2px 5px 5px black ;
+
+  }
+  #contact
+  {
+    background-color: white;
+    color: black;
+  }
+  div
+  {
+    align-items: center;
+    text-align: center;
+    /* box-shadow:15px 15px 20px gray; */
+    border: 2px white dolid;
+    width: 400px;
+    margin-left: 720px;
+  }
+    
+  body
+  {
+    background-image: url("mainbackground.jpg");
+  }
+  #infodiv
+  { 
+    background-color: #1B1B1B;
+    height: 700px;
+    width: 400px;
+    display: flex;
+    float: right;
+    margin: 90px;
+    padding: auto;                                                          
+    float: right;
+     border-radius: 10%;
+     color: white;
+     
+  }
+  /* #result
+  {
+    
+  } */
+  
+    </style>
+</head>
+
+<body>
+
+     <header>
+    <nav id="mainnav"> 
+        <a href="index.html">Home</a>
+        <a href="about.html">About </a>
+        <a href="foodmenue.html"> Food menu</a>
+        <a href="gallery.html"> Gallary</a>
+        <a href="contach.html" id="contact">Contact </a>
+    </nav>
+    
+      <!-- <div id="infodiv"> -->
+        <!-- <p>Contact Information</p> -->
+       
+</div>
+    <form action="" onsubmit="return false;"><h1 style="text-align: center;">Contact Form </h1>
+
+        <label for="Full name"> Full Name</label><br>
+        <input type="text"  placeholder="Full Name" id="fname"><br>  
+        <span id="sp1" style="color: red;">  </span><br> 
+
+        <label for="Email">Email</label><br>
+        <input type="email" name="email" id="email" required placeholder="Email"> <br>
+         <span id="sp2" style="color: red;" >  </span><br> 
+
+       <label for="Mobile"> Phone Number</label><br>
+       <input type="number" required id="number" placeholder="Mobile"> <br>
+       <span id="sp3" style="color: red;"></span> <br> 
+
+       <label for="code"> Area Code</label><br>
+       <input type="number" required size="6" maxlength="6" id="code" placeholder=" Area Code"> <br>
+         <span id="sp4" style="color: red;"></span><br> <br>
+       
+<button type="submit" onclick="contact()" type="button"> Submit</button>
+<button type="reset"> Reset  </button>
+<span id="spn"></span>
+
+
+    </form>
+  
+    <div >
+  <span id="result" style="color: rgb(10, 99, 10); background-color: rgb(240, 236, 236);" ></span>
+  
+<!-- </div> -->
+    </header>
+<br><br>
+     <footer>
+        <nav id="footernav"> <p>&copy;2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
+            <br><br>
+        <a href="first.html">Home</a> 
+    <a href="about.html">About</a> 
+      <a href="foodmenue.html">menu</a></nav>
+    </footer>
+    
+</body>
+</html>
