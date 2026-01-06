@@ -1,134 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>foodmenu</title>
-    <style>
-         #mainnav
-{
-    background-color: black;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
 
-}
- #menu,a
-{
-    
-     display: inline-block;     /* Required for width/height to apply */
-  width: 120px;
-  height: 25px;
-  line-height: 50px;         /* Vertically center text */
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  font-size: 20px;
-  border-radius: 9px;
-  gap: 20px;
-  line-height: 100%;
-}
- #footernav
-  {
-    background-color: #1B1B1B;
-    color: white;
-    height: 200px;
-    width: 100%px;
-    text-align: center;
-    padding: 20px;
-  }
-  a:hover
-  {
-      color: black;
-  background-color: white;
-  border: 1px solid black;
-  /* padding: 10px; */
-      border: 4px solid black;
-
-  }
-  #menu
-  {
-    color: black;
-    background-color: white;
-  }
-  div
-  {
-   display: flex; 
-      margin: 50px;
-   
-  }
-  img
-  {
-    height: 250px;
-    width:250px;
-    gap: 30px;
-    padding: 10px;
-margin-left: 20px;
-box-shadow: 5px 10px 10px rgb(72, 71, 71);
-  }
-  img:hover
-  {
-    transform: scale(0.9); 
-    /* transform: scale(5);  */
-    /* transform: scale3d(1.1, 1.1, 1); */
-    /* transform: skew(5deg); */
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    </style>
+
+    body {
+      background-color: rgba(128, 128, 128, 0.261);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #mainnav {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    #menu, #mainnav a {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      font-size: 18px;
+      border-radius: 9px;
+    }
+
+    #menu {
+      background-color: white;
+      color: black;
+    }
+
+    #mainnav a:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 5px 10px 10px rgb(72, 71, 71);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(0.9);
+    }
+
+    footer {
+      background-color: #1B1B1B;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    #footernav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+
+      #mainnav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #menu, #mainnav a {
+        width: 90%;
+      }
+
+      .gallery img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
-<body style="   background-color: rgba(128, 128, 128, 0.261);
-">
-      <header>
-    <nav id="mainnav"> 
-        <a href="index.html">Home</a>
-        <a href="about.html">About </a>
-        <a href="foodmenue.html" id="menu"> Food menu</a>
-        <a href="gallery.html"> Gallary</a>
-        <a href="contach.html">Contact </a>
-    </nav>
-    </header>
-    <br><br>
-    <h1 style="text-align: center;"> THE KITCHEN - FOOD MENU</h1><br><br>
-<div>
-    <figure>
-    <img src="sky kitchen.jpg" alt=""> 
-    <caption> </caption> 
-    </figure>
-    <img src="im2.jpg" alt="">
-    <img src="im3.jpg" alt="">
-    <img src="im4.jpg" alt="">
-    <img src="im5.jpg" alt="" >
-    <img src="a2.jpg" alt="" >
+
+<body>
+
+<header>
+  <nav id="mainnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foodmenue.html" id="menu">Food Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contach.html">Contact</a>
+  </nav>
+</header>
+
+<h1>THE KITCHEN – FOOD MENU</h1>
+
+<div class="gallery">
+  <img src="sky kitchen.jpg" alt="">
+  <img src="im2.jpg" alt="">
+  <img src="im3.jpg" alt="">
+  <img src="im4.jpg" alt="">
+  <img src="im5.jpg" alt="">
+  <img src="a2.jpg" alt="">
 </div>
 
-
-<div>
-    <img src="n1.jpg" alt="">
-    <img src="n2.jpg" alt="">
-    <img src="n3.jpg" alt="">
-    <img src="n4.jpg" alt="">
-    <img src="n5.jpg" alt="">
-    <img src="s1.jpg" alt="">
+<div class="gallery">
+  <img src="n1.jpg" alt="">
+  <img src="n2.jpg" alt="">
+  <img src="n3.jpg" alt="">
+  <img src="n4.jpg" alt="">
+  <img src="n5.jpg" alt="">
+  <img src="s1.jpg" alt="">
 </div>
 
-<div style="margin:70px; padding-left:90px ;">
-    
-    <img src="s2.jpg" alt="">
-    <img src="s3.jpg" alt="">
-    <img src="s5.jpg" alt="">
-    <img src="x6.jpg" alt="">
-    <img src="a1.jpg" alt="">
+<div class="gallery">
+  <img src="s2.jpg" alt="">
+  <img src="s3.jpg" alt="">
+  <img src="s5.jpg" alt="">
+  <img src="x6.jpg" alt="">
+  <img src="a1.jpg" alt="">
 </div>
-<br><br>
-    
-    <footer>
-        <nav id="footernav"> <p>&copy;2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
-            <br><br>
-        <a href="first.html">Home</a> 
-    <a href="about.html">About</a> 
-      <a href="foodmenue.html">menu</a></nav>
-    </footer>
+
+<footer>
+  <p>&copy; 2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
+  <nav id="footernav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foodmenue.html">Menu</a>
+  </nav>
+</footer>
+
 </body>
 </html>

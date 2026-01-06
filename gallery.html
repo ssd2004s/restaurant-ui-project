@@ -1,145 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>foodmenu</title>
-    <style>
-         #mainnav
-{
-    background-color: black;
-    height: 50px;
-    width: 1905px;
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
 
-}
- #gallery,a
-{
-    
-     display: inline-block;     /* Required for width/height to apply */
-  width: 120px;
-  height: 25px;
-  line-height: 50px;         /* Vertically center text */
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  font-size: 20px;
-  border-radius: 9px;
-  gap: 20px;
-  line-height: 100%;
-}
- #footernav
-  {
-    background-color: #1B1B1B;
-    color: white;
-    height: 200px;
-    width: 100%px;
-    text-align: center;
-    padding: 20px;
-  }
-  a:hover
-  {
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #mainnav {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    #gallery, #mainnav a {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      font-size: 18px;
+      border-radius: 9px;
+    }
+
+    #gallery {
+      background-color: white;
       color: black;
-  background-color: white;
-  border: 1px solid black;
-        border: 4px solid black;
+    }
 
+    #mainnav a:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
 
-  /* padding: 10px; */
-  }
-  #gallery
-  {
-background-color: white;
-color: black;
-  }
-  div
-  {
-    display: flex;
-    height: 300px;
-    width: 100%px;
-    padding-left: 150px;
-    padding-right: 80px;
-    margin: 70px;
-    /* margin: 20px; */
-    gap: 50px;
-    
-  }
-  img
-  {
-    height: 300px;
-    width: 300px;
-    /* box-shadow: 10px 15px 155px black; */
-  }
-  .figc
-  {
-  /* position: relative; */
-  width: 300px;
-  }
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+    }
 
-  .image-container figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
 
-    </style>
+    .gallery img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 5px 10px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(0.9);
+    }
+
+    footer {
+      background-color: #1B1B1B;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    #footernav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+
+      #mainnav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #gallery, #mainnav a {
+        width: 90%;
+      }
+
+      .gallery img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
-<body >
-      <header>
 
-    <nav id="mainnav"> 
-        <a href="index.html" id="img" >Home</a>
-        <a href="about.html">About </a>
-        <a href="foodmenue.html"> Food menu</a>
-        <a href="gallery.html" id="gallery"> Gallary</a>
-        <a href="contach.html">Contact </a>
-    </nav>
-    </header>
-    <br><br>
-          <h1 style="margin-left: 45%;"> our <u>BEST</u> entrance</h1>
+<body>
 
-    <div>
-      <img src="i2.jpg" alt="">
-      <img src="i3.jpg" alt="">   
-      <img src="i4.jpg" alt="">
-      <img src="i5.jpg" alt="">
-      
-    </div>
+<header>
+  <nav id="mainnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foodmenue.html">Food Menu</a>
+    <a href="gallery.html" id="gallery">Gallery</a>
+    <a href="contach.html">Contact</a>
+  </nav>
+</header>
 
-    <div>
-      <img src="i6.jpg" alt="">
-      <img src="i7.jpg" alt="">
-      <img src="i8.jpg" alt="">
-      <img src="i9.jpg" alt="">
+<h1>Our <u>Best</u> Entrance</h1>
 
-    </div>
-    <footer>
-        <nav id="footernav"> <p>&copy;2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
-            <br><br>
-        <a href="first.html">Home</a> 
-    <a href="about.html">About</a> 
-      <a href="foodmenue.html">menu</a></nav>
-    </footer>
+<div class="gallery">
+  <img src="i2.jpg" alt="">
+  <img src="i3.jpg" alt="">
+  <img src="i4.jpg" alt="">
+  <img src="i5.jpg" alt="">
+</div>
 
+<div class="gallery">
+  <img src="i6.jpg" alt="">
+  <img src="i7.jpg" alt="">
+  <img src="i8.jpg" alt="">
+  <img src="i9.jpg" alt="">
+</div>
 
-    
-    
+<footer>
+  <p>&copy; 2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
+  <nav id="footernav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foodmenue.html">Menu</a>
+  </nav>
+</footer>
+
 </body>
 </html>
-
-
-
-

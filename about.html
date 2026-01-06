@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -19,137 +20,153 @@
       flex-direction: column;
     }
 
-    header {
-      flex-shrink: 0;
-    }
-
     #mainnav {
       background-color: black;
-      height: 90px;
       width: 100%;
-      text-align: center;
-      padding-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 10px;
+      flex-wrap: wrap;
     }
 
-    #about, a {
+    #about, #mainnav a {
       display: inline-block;
       width: 120px;
-      height: 25px;
+      height: 30px;
+      line-height: 30px;
       text-align: center;
       text-decoration: none;
       color: white;
       background-color: black;
-      font-size: 20px;
+      font-size: 18px;
       border-radius: 9px;
-      margin: 0 10px;
-      line-height: 25px;
-    }
-
-    a:hover {
-      color: black;
-      background-color: white;
-      border: 1px solid black;
     }
 
     #about {
-      color: black;
       background-color: white;
+      color: black;
+    }
+
+    #mainnav a:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
     }
 
     main {
       flex: 1;
+      padding: 20px;
     }
 
-    p {
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
       background-color: rgba(7, 7, 13, 0.069);
-      width: 800px;
-      margin: 30px auto;
       padding: 20px;
       line-height: 1.6;
+      overflow: hidden;
     }
 
-    img {
+    .content img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      margin: 10px;
+    }
+
+    .left {
       float: left;
-      height: 300px;
-      width: 300px;
       margin-right: 20px;
     }
 
-    #secondp {
-      clear: both;
-    }
-
-    #img2 {
+    .right {
       float: right;
       margin-left: 20px;
     }
 
     footer {
-    background-color: #1B1B1B;
-      padding: 20px;
+      background-color: #1B1B1B;
       text-align: center;
       color: white;
-    }
-
-    footer p {
-      margin-bottom: 10px;
-      color: white;
+      padding: 20px;
     }
 
     footer a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    @media (max-width: 768px) {
+
+      #mainnav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #about, #mainnav a {
+        width: 90%;
+      }
+
+      .content img {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
+
+      .content {
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <nav id="mainnav"> 
-      <a href="index.html">Home</a>
-      <a href="about.html" id="about">About</a>
-      <a href="foodmenue.html">Food Menu</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contach.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <nav id="mainnav">
+    <a href="index.html">Home</a>
+    <a href="about.html" id="about">About</a>
+    <a href="foodmenue.html">Food Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contach.html">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <p id="firstp">
-      <img src="lightimg.png" alt="Food">
-      <strong>THOUGHTS ON</strong><br>
-      The Sky Kitchen celebrates European Cuisine through traditional techniques, the finest ingredients and contemporary flair. Each kitchen is led by a <br>
-      talented chef whose passion lies in creating uniquely rooted yet modern dishes. <br>
-      With international outposts in some of the world’s most vibrant cities, including Pune, The Sky Kitchen menu is a culinary balance of signature dishes <br>
-      available at The Sky Kitchen location and dishes curated with local tastes and traditions. <br>
-      For exclusive private events or large group bookings, The Sky Kitchen Pune has a selection of areas and menus to choose from.
-    </p>
+<main>
 
-    <p id="secondp">
-      <img src="teamimg.jpg" alt="Team" id="img2">
-      <strong>Our Team</strong><br>
-      Our team – cooks or servers, butchers or bartenders – speak to any of them and you’ll realize one thing: what ties us all together is that we all want <br>
-      to put a smile on the face of every guest that walks through the doors of The Sky Kitchen. We want you to come in and forget what you’ve been through, <br>
-      because we’re here to take care of you! <br><br>
-      But as we do that we also take care of each other, learn from each other, grow as a team and most importantly have fun while doing all of this. <br>
-      The Sky Kitchen, one of Pune's most celebrated restaurants, has welcomed guests to enjoy its globally inspired cuisine and hospitality. <br>
-      Located in the iconic area of Pune, from introducing the concept of small and large plates to providing a true farm-to-table experience, <br>
-      The Sky Kitchen continues to be at the forefront of Indian hospitality.
-    </p>
-  </main>
+  <div class="content">
+    <img src="lightimg.png" alt="Food" class="left">
+    <strong>THOUGHTS ON</strong><br>
+    The Sky Kitchen celebrates European Cuisine through traditional techniques, the finest ingredients and contemporary flair.
+    Each kitchen is led by a talented chef whose passion lies in creating uniquely rooted yet modern dishes.
+    With international outposts in vibrant cities including Pune, The Sky Kitchen menu balances signature dishes
+    and local culinary traditions. For exclusive private events or large group bookings, a selection of areas and menus
+    is available.
+  </div>
 
-  <footer>
-    <p>&copy; 2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
-    <a href="first.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="foodmenue.html">Menu</a>
-  </footer>
+  <div class="content">
+    <img src="teamimg.jpg" alt="Team" class="right">
+    <strong>Our Team</strong><br>
+    Our team believes in one thing — putting a smile on every guest’s face.
+    We want you to relax, feel welcomed, and enjoy exceptional hospitality.
+    We grow together, support one another, and most importantly, have fun while delivering unforgettable dining experiences.
+    The Sky Kitchen continues to be one of Pune’s most celebrated restaurants with its globally inspired cuisine.
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 The Sky Kitchen. All Rights Reserved | Designed by SANIKA DABADE❤️</p>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="foodmenue.html">Menu</a>
+</footer>
 
 </body>
 </html>
